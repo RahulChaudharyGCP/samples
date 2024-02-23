@@ -44,7 +44,7 @@ jobs:
       name: 'Authenticate to Google Cloud'
       uses: 'google-github-actions/auth@v0.1.0'
       with:
-        #audience: 'https://iam.googleapis.com/projects/thematic-acumen-414206/locations/global/workloadIdentityPools/test/providers/Okta'
+        aud: '//iam.googleapis.com/projects/thematic-acumen-414206/locations/global/workloadIdentityPools/test/providers/Okta'
         #token_format: 'access_token'
         workload_identity_provider: 'projects/thematic-acumen-414206/locations/global/workloadIdentityPools/test/providers/Okta'
         service_account: 'jenkins-sa@thematic-acumen-414206.iam.gserviceaccount.com'
