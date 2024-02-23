@@ -45,9 +45,9 @@ jobs:
       uses: 'google-github-actions/auth@v0.1.0'
       with:
         #audience: '//iam.googleapis.com/projects/130848630175/locations/global/workloadIdentityPools/test/providers/Okta'
-        #token_format: 'access_token'
-        workload_identity_provider: 'projects/130848630175/locations/global/workloadIdentityPools/test/providers/Okta'
-        service_account: 'jenkins-sa@thematic-acumen-414206.iam.gserviceaccount.com'
+        token_format: 'access_token'
+        workload_identity_provider: 'projects/130848630175/locations/global/workloadIdentityPools/github-wif/providers/githuboidc'
+        service_account: 'github-action@thematic-acumen-414206.iam.gserviceaccount.com'
 
     # Alternative option - authentication via credentials json
     # - id: 'auth'
