@@ -48,6 +48,8 @@ jobs:
         token_format: 'access_token'
         workload_identity_provider: 'projects/130848630175/locations/global/workloadIdentityPools/github-wif/providers/githuboidc'
         service_account: 'github-action@thematic-acumen-414206.iam.gserviceaccount.com'
+        create_credentials_file: true
+        activate_credentials_file: true
 
     # Alternative option - authentication via credentials json
     # - id: 'auth'
