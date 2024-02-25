@@ -1,5 +1,5 @@
 variable "gcp_project_id" {
-    type = string
-    description = "sample project"
-  
+  type        = string
+  description = "sample project"
+
 }
