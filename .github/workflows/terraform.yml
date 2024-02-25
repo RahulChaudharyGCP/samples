@@ -67,6 +67,16 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
+        # Configure Workload Identity Federation and generate an access token.
+    - id: 'auth'
+      name: 'Authenticate to Google Cloud'
+      uses: 'google-github-actions/auth@v1'
+      with:
+          #audience: '//iam.googleapis.com/projects/130848630175/locations/global/workloadIdentityPools/test/providers/Okta'
+        token_format: 'access_token'
+        workload_identity_provider: 'projects/130848630175/locations/global/workloadIdentityPools/github-wif/providers/githuboidc'
+        service_account: 'github-action@thematic-acumen-414206.iam.gserviceaccount.com'
+        create_credentials_file: true
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
