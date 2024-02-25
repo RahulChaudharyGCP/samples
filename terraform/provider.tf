@@ -12,3 +12,10 @@ provider "google" {
   region  = "us-central1"
 
 }
+
+terraform {
+  backend "gcs" {
+    bucket = "gke-app-dev"
+    prefix = "sample/app"
+  }
+}
