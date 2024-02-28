@@ -3,4 +3,6 @@ steps:
   args: ['build', '-t', 'us-central1-docker.pkg.dev/thematic-acumen-414206/samples/sample-app:v1', '.']
 - name: gcr.io/cloud-builders/docker
   args: ['push', 'us-central1-docker.pkg.dev/thematic-acumen-414206/samples/sample-app:v1']
+options:
+  logging: CLOUD_LOGGING_ONLY
   
