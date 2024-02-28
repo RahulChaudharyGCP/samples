@@ -21,13 +21,13 @@ resource "google_compute_network" "gcp_network" {
 }
 
 resource "google_compute_network_peering" "vpc_gcp_peering" {
-  name         = "vpc_gcp_peering"
+  name         = "vpc-gcp-peering"
   network      = google_compute_network.vpc_network.self_link
   peer_network = google_compute_network.gcp_network.self_link
 }
 
 resource "google_compute_network_peering" "gcp_vpc_peering" {
-  name         = "gcp_vpc_peering"
+  name         = "gcp-vpc-peering"
   network      = google_compute_network.gcp_network.self_link
   peer_network = google_compute_network.vpc_network.self_link
 }
